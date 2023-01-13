@@ -48,7 +48,7 @@ We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with 
 	 ![ROOT Notebook browser](browser_local.png)
 	 **Note the `local` directory:** if you open it, you'll browse the repository on your disk (and not that in the container), and all changes you make to the notebooks, or any new notebook you create, will be saved on your disk.
 
-- If none of the above works for you, you can launch a standalone [MyBinder](https://mybinder.org) environment using the other button below: it will give you a working setup with Python and ROOT, that will allow you to run the notebooks from the browser. Note that in this case any change you make will be lost unless you manually copy your code from the browser window to somewhere else.
+- If none of the above works for you, you can launch a standalone [MyBinder](https://mybinder.org/v2/gh/marcodelmastro/ESIPAP-EPP-Tutorials/main) environment using the other button below: it will give you a working setup with Python and ROOT, that will allow you to run the notebooks from the browser. Note that in this case any change you make will be lost unless you manually copy your code from the browser window to somewhere else.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcodelmastro/ESIPAP-EPP-Tutorials/main)
 
