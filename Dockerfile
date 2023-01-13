@@ -42,4 +42,4 @@ USER ${username}
 EXPOSE 8888
 
 # Start ROOT with the --notebook flag to fire up the container
-CMD ["root", "--notebook",  "--no-browser"]
+CMD ["root", "--notebook", "--no-browser"]

@@ -16,7 +16,7 @@ We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with 
 
    * From the command line, run the command:  
      \
-     `docker run --rm -p 8888:8888 --name marcodelmastro/esipap-epp-tutorials:latest`
+     `docker run --rm -p 8888:8888 --name esipap-epp-tutorials marcodelmastro/esipap-epp-tutorials:latest`
 	 \
      This will start the `esipap-epp-tutorials` container.
 	 You should see on the screen a series of messages, including one with a `http` address similar to this (**the token string will be different!**):  
@@ -30,25 +30,25 @@ We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with 
      This is because docker will serve you the notebook from the container, and you don't have the right to save them. 
 	 In other to keep your changes run instead this command:  
 	 \
-     `docker run --rm -p 8888:8888 -v <location-of-the-repo>:/home/esipap/local --name ESIPAP marcodelmastro/esipap-epp-tutorials:latest`  
+     `docker run --rm -p 8888:8888 -v <location-of-the-repo>:/home/esipap/local --name esipap-epp-tutorials marcodelmastro/esipap-epp-tutorials:latest`  
 	 \
 	 where `<location-of-the-repo>` is the path to where you downloaded the `ESIPAP-EPP-Tutorials` repository. For instance, on a Unix machin is could be:  
 	 \
-	 `docker run --rm -p 8888:8888 -v /Users/Marco/ESIPAP-EPP-Tutorials:/home/esipap/local --name ESIPAP marcodelmastro/esipap-epp-tutorials:latest`  
+	 `docker run --rm -p 8888:8888 -v /Users/Marco/ESIPAP-EPP-Tutorials:/home/esipap/local --name esipap-epp-tutorials marcodelmastro/esipap-epp-tutorials:latest`  
 	 \
 	 or, on a Windows machine, something like:  
 	 \
-	 `docker run --rm -p 8888:8888 -v  C:\Users\Marco\ESIPAP-EPP-Tutorials:/home/esipap/local --name ESIPAP marcodelmastro//esipap-epp-tutorials:latest`  
+	 `docker run --rm -p 8888:8888 -v C:\Users\Marco\ESIPAP-EPP-Tutorials:/home/esipap/local --name esipap-epp-tutorials marcodelmastro//esipap-epp-tutorials:latest`  
 	 \
 	 On a Unix machine you could also `cd` to the repository and use the `pwd` command like:  
 	 \
-	 `docker run --rm -p 8888:8888 -v  $(pwd):/home/esipap/local --name ESIPAP marcodelmastro/esipap-epp-tutorials:latest`  
+	 `docker run --rm -p 8888:8888 -v $(pwd):/home/esipap/local --name esipap-epp-tutorials marcodelmastro/esipap-epp-tutorials:latest`  
 	 \
 	 In all these cases, when you open the notebook server windowd you should see something like:  
 	 ![ROOT Notebook browser](browser_local.png)
 	 **Note the `local` directory:** if you open it, you'll browse the repository on your disk (and not that in the container), and all changes you make to the notebooks, or any new notebook you create, will be saved on your disk.
 
-- If none of the above works for you, you can launch a standalone [MyBinder](https://mybinder.org) environment using the other button below: it will give you a working setup with Python and ROOT, that will allow you to run the notebooks from the browser. Please note that in this case any change you make will be lost unless you copy them elsewhere.
+- If none of the above works for you, you can launch a standalone [MyBinder](https://mybinder.org) environment using the other button below: it will give you a working setup with Python and ROOT, that will allow you to run the notebooks from the browser. Note that in this case any change you make will be lost unless you manually copy your code from the browser window to somewhere else.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcodelmastro/ESIPAP-EPP-Tutorials/main)
 
