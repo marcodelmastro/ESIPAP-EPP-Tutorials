@@ -1,4 +1,4 @@
-FROM rootproject/root:latest
+FROM rootproject/root:6.24.06-ubuntu20.04
 
 # Run the following commands as super user (root):
 USER root
@@ -32,8 +32,15 @@ RUN chown -R ${username} ${HOME}
 # Set working directory
 WORKDIR ${HOME}
 
+# Currently need to have both jupyter_notebook_config and jupyter_server_config to support classic and lab
+COPY jupyter_server_config.py /etc/jupyter/
+
+# Legacy for Jupyter Notebook Server, see: [#1205](https://github.com/jupyter/docker-stacks/issues/1205)
+RUN sed -re "s/c.ServerApp/c.NotebookApp/g" \
+    /etc/jupyter/jupyter_server_config.py > /etc/jupyter/jupyter_notebook_config.py
+
 # Create the configuration file for jupyter and set owner
-RUN echo "c.NotebookApp.ip = '*'" > jupyter_notebook_config.py && chown ${username} *
+RUN echo "c.NotebookApp.ip = '*'" >> /etc/jupyter/jupyter_notebook_config.py && chown ${username} *
 
 # Switch to our newly created user
 USER ${username}
