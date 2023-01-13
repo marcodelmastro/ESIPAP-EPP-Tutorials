@@ -2,7 +2,9 @@
 
 This repository containes the [Python notebooks](Tutorials) to run data analysis exercises we perform in one of the ESIPAP EPP tutorials.
 
-We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with [Jupyter](https://jupyter.org) notebooks. You have several options to run these notebooks:
+We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with [Jupyter](https://jupyter.org) notebooks. 
+
+## There are several options to run these notebooks
 
 - You already have a local setup version of Python3 and ROOT (with Python support enabled) installed on your computer: clone or download the repository, and run the notebooks locally.
 
@@ -54,4 +56,6 @@ We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with 
 
 **Execute the [example notebook](TestSetup.ipynb) there to verify your setup!**
 
-If you never used Python before, fear not! It's rather easy to get the grip of the basics. You can use the excellent [Crash Course](https://github.com/rpmuller/PythonCrashCourse) by [Rick Muller](http://www.cs.sandia.gov/~rmuller/) to get started.
+## If you never used Python before, fear not! 
+
+It's rather easy to get the grip of the basics. You can for instance use the excellent [Crash Course](https://github.com/rpmuller/PythonCrashCourse) by [Rick Muller](http://www.cs.sandia.gov/~rmuller/) to get started.
