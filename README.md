@@ -14,11 +14,11 @@ We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with 
 
    * Once done, make sure you can run the `docker` command from a terminal;
 
-   * Clone or download the ESIPAP-2022 repository (this one!) somewhere to your disk;
+   * Clone or download the ESIPAP-EPP-Tutorials repository (this one!) somewhere to your disk;
 
    * From the command line, run the command:  
      \
-     `docker run --rm -p 8888:8888 --name ESIPAP marcodelmastro/esipap:ESIPAP-2022`  
+     `docker run --rm -p 8888:8888 --name ESIPAP marcodelmastro/esipap:ESIPAP-EPP-Tutorials`  
 	 \
      This will start the ESIPAP container.
 	 You should see on the screen a series of messages, including one with a `http` address similar to this (**the token string will be different!**):  
