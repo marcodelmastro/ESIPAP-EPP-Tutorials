@@ -30,11 +30,11 @@ We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with 
 
    * Note that if you use the procedure described above, **every change you make to the notebook will be lost when you stop the container!**. 
      This is because docker will serve you the notebook from the container, and you don't have the right to save them. 
-	 In other to keep your changes run instead this command:  
+	 In other to keep your changes, run instead this command:  
 	 \
      `docker run --rm -p 8888:8888 -v <location-of-the-repo>:/home/esipap/local --name esipap-epp-tutorials marcodelmastro/esipap-epp-tutorials:latest`  
 	 \
-	 where `<location-of-the-repo>` is the path to where you downloaded the `ESIPAP-EPP-Tutorials` repository. For instance, on a Unix machin is could be:  
+	 where `<location-of-the-repo>` is the path to where you downloaded the `ESIPAP-EPP-Tutorials` repository. For instance, on a Unix machine it could be:  
 	 \
 	 `docker run --rm -p 8888:8888 -v /Users/Marco/ESIPAP-EPP-Tutorials:/home/esipap/local --name esipap-epp-tutorials marcodelmastro/esipap-epp-tutorials:latest`  
 	 \
