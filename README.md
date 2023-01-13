@@ -14,13 +14,11 @@ We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with 
 
    * Once done, make sure you can run the `docker` command from a terminal;
 
-   * Clone or download the ESIPAP-EPP-Tutorials repository (this one!) somewhere to your disk;
-
    * From the command line, run the command:  
      \
-     `docker run --rm -p 8888:8888 --name ESIPAP marcodelmastro/esipap:ESIPAP-EPP-Tutorials`  
+     `docker run --rm -p 8888:8888 --name marcodelmastro/esipap-epp-tutorials:latest`
 	 \
-     This will start the ESIPAP container.
+     This will start the `esipap-epp-tutorials` container.
 	 You should see on the screen a series of messages, including one with a `http` address similar to this (**the token string will be different!**):  
 	 \
      `http://127.0.0.1:8888/?token=5666c2fc6015b0e0310382076f31ad9df7f2afc2694090ff`
@@ -32,19 +30,19 @@ We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with 
      This is because docker will serve you the notebook from the container, and you don't have the right to save them. 
 	 In other to keep your changes run instead this command:  
 	 \
-     `docker run --rm -p 8888:8888 -v <location-of-the-ESIPAP-repo>:/home/esipap/local --name ESIPAP marcodelmastro/esipap:ESIPAP-EPP-Tutorials`  
+     `docker run --rm -p 8888:8888 -v <location-of-the-repo>:/home/esipap/local --name ESIPAP marcodelmastro/esipap-epp-tutorials:latest`  
 	 \
-	 where `<location-of-the-ESIPAP-repo>` is the path to where you downloaded the ESIPAP repository. For instance, on a Unix machin is could be:  
+	 where `<location-of-the-repo>` is the path to where you downloaded the `ESIPAP-EPP-Tutorials` repository. For instance, on a Unix machin is could be:  
 	 \
-	 `docker run --rm -p 8888:8888 -v /Users/Marco/ESIPAP-2022:/home/esipap/local --name ESIPAP marcodelmastro/esipap:ESIPAP-EPP-Tutorials`  
+	 `docker run --rm -p 8888:8888 -v /Users/Marco/ESIPAP-EPP-Tutorials:/home/esipap/local --name ESIPAP marcodelmastro/esipap-epp-tutorials:latest`  
 	 \
 	 or, on a Windows machine, something like:  
 	 \
-	 `docker run --rm -p 8888:8888 -v  C:\Users\Marco\ESIPAP-2022:/home/esipap/local --name ESIPAP marcodelmastro/esipap:ESIPAP-EPP-Tutorials`  
+	 `docker run --rm -p 8888:8888 -v  C:\Users\Marco\ESIPAP-EPP-Tutorials:/home/esipap/local --name ESIPAP marcodelmastro//esipap-epp-tutorials:latest`  
 	 \
 	 On a Unix machine you could also `cd` to the repository and use the `pwd` command like:  
 	 \
-	 `docker run --rm -p 8888:8888 -v  $(pwd):/home/esipap/local --name ESIPAP marcodelmastro/esipap:ESIPAP-EPP-Tutorials`  
+	 `docker run --rm -p 8888:8888 -v  $(pwd):/home/esipap/local --name ESIPAP marcodelmastro/esipap-epp-tutorials:latest`  
 	 \
 	 In all these cases, when you open the notebook server windowd you should see something like:  
 	 ![ROOT Notebook browser](browser_local.png)
