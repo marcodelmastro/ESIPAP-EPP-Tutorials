@@ -3,6 +3,10 @@ FROM rootproject/root:6.24.06-ubuntu20.04
 # Run the following commands as super user (root):
 USER root
 
+# Fix: https://github.com/hadolint/hadolint/wiki/DL4006
+# Fix: https://github.com/koalaman/shellcheck/wiki/SC3014
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # Install required packages for notebooks
 RUN apt-get update
 RUN apt-get install -y python3-pip 
@@ -50,3 +54,7 @@ EXPOSE 8888
 
 # Start ROOT with the --notebook flag to fire up the container
 CMD ["root", "--notebook", "--no-browser"]
+
+# Start a shell
+#ENTRYPOINT ["/bin/bash", "-l", "-c"]
+#CMD ["/bin/bash"]
